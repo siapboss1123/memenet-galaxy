@@ -1,12 +1,34 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import CustomCursor from '@/components/CustomCursor';
+import GalaxyBackground from '@/components/GalaxyBackground';
+import FloatingMemes from '@/components/FloatingMemes';
+import HeroSection from '@/components/HeroSection';
+import AboutSection from '@/components/AboutSection';
+import EcosystemSection from '@/components/EcosystemSection';
+import RoadmapSection from '@/components/RoadmapSection';
+import MemeGalaxySection from '@/components/MemeGalaxySection';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="relative min-h-screen bg-background overflow-x-hidden">
+      {/* Custom Cursor */}
+      <CustomCursor />
+      
+      {/* Background Effects */}
+      <GalaxyBackground />
+      
+      {/* Floating Meme Icons */}
+      <FloatingMemes />
+      
+      {/* Main Content */}
+      <main className="relative z-10">
+        <HeroSection />
+        <AboutSection />
+        <EcosystemSection />
+        <RoadmapSection />
+        <MemeGalaxySection />
+        <Footer />
+      </main>
     </div>
   );
 };
